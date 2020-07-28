@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .2);
+    padding-top: 15vh;
+    overflow: scroll;
+
+    // 歌曲图片 
+    .song-img {
+        width: 70vw;
+        height: 70vw;
+        background: rgb(0, 0, 0);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15vw;
+
+        img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
+    }
+
+    //歌曲信息
+    .song-info {
+        width: 100vw;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        .song {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    }
+
+    // 进度条
+    .progress-bar {
+        width: 100vw;
+        height: 6vw;
+        display: flex;
+
+        .cur-time,
+        .totol-time {
+            padding: 0 6px;
+        }
+
+        .drag {
+            flex: 1 1 auto;
+            height: 6vw;
+            position: relative;
+
+            .circle {
+                width: 2vw;
+                height: 2vw;
+                background: #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                margin-top: -1vw;
+                left: 0px;
+            }
+
+            .deep-bar {
+                height: 1vw;
+                background: rgba(0, 0, 0, .5);
+                margin-top: 2.5vw;
+                margin-left: 1vw;
+            }
+
+            .shallow-bar {
+                width: 0px;
+                height: 1vw;
+                background: #fff;
+                position: absolute;
+                top: 50%;
+                margin-top: -0.5vw;
+                margin-left: 1vw;
+            }
+        }
+    }
+
+    // 底部菜单
+    .menu-bar {
+        width: 100vw;
+        height: 10vh;
+        background: rgb(0, 0, 0);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+
+        li {
+            height: 100%;
+            width: 20%;
+        }
+
+        li:nth-child(1) {
+            background: url("../images/icon-like.png") no-repeat center/30%;
+
+            &.like {
+                background: url("../images/icon-like-solid.png") no-repeat center/30%;
+            }
+        }
+
+        li:nth-child(2) {
+            background: url("../images/icon-prev.png") no-repeat center/30%;
+        }
+
+        li:nth-child(3) {
+            background: url("../images/icon-play.png") no-repeat center/30%;
+
+            &.play {
+                background: url("../images/icon-pause.png") no-repeat center/30%;
+            }
+        }
+
+        li:nth-child(4) {
+            background: url("../images/icon-next.png") no-repeat center/30%;
+        }
+
+        li:nth-child(5) {
+            background: url("../images/icon-playlist.png") no-repeat center/30%;
+        }
+    }
+
+    // 歌曲列表
+    .song-list {
+        width: 100vw;
+        background: linear-gradient(rgb(0, 0, 0), rgba(170, 170, 170));
+        position: fixed;
+        bottom: 0;
+        display: none;
+        &.show {
+            display: block;
+        }
+        dt,
+        dd,
+        .close {
+            height: 6vh;
+            line-height: 6vh;
+        }
+        .close,
+        dt {
+            text-align: center;;
+        }
+        dd {
+            margin-left: 10px;
+        }
+        dd.active{
+            color: #f09217;
+        }
+    }
+
+}

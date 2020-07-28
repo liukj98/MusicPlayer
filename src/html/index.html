@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+    <title>music player</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- 歌曲图片 -->
+        <div class="song-img">
+            <img src="../source/song_1.jpg" alt="">
+        </div>
+
+        <!-- 歌曲信息 -->
+        <div class="song-info">
+            <div class="song">听妈妈的话</div>
+            <div class="singer">周杰伦</div>
+            <div class="album">依然范特西</div>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="progress-bar">
+            <div class="cur-time">00:00</div>
+            <div class="drag">
+                <div class="deep-bar"></div>
+                <div class="shallow-bar"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="totol-time">00:00</div>
+        </div>
+
+        <!-- 菜单栏 -->
+        <ul class="menu-bar">
+            <!-- <li class="like"></li> -->
+            <li></li>
+            <li></li>
+            <!-- <li class="play"></li> -->
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- 歌曲列表 -->
+        <!-- <div class="song-list show"> -->
+        <!-- <div class="song-list">
+            <dl>
+                <dt>播放列表</dt>
+                <dd>听妈妈的话</dd>
+                <dd>听妈妈的话</dd>
+                <dd>听妈妈的话</dd>
+                <dd>听妈妈的话</dd>
+            </dl>
+            <div class="close">关闭</div>
+        </div> -->
+
+    </div>
+
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/gaussBlur.js"></script>
+    <script src="../js/render.js"></script>
+    <script src="../js/audio.js"></script>
+    <script src="../js/indexControl.js"></script>
+    <script src="../js/listControl.js"></script>
+    <script src="../js/progressBar.js"></script>
+    <script src="../js/index.js"></script>
+
+</body>
+</html>
